@@ -1,0 +1,1 @@
+1- En el archivo bd.sql va la base de datos con la cual se debe colocar en SQL de phpmyadmin

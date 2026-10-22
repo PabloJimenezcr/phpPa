@@ -1,0 +1,51 @@
+
+[
+    {
+        "id": 1,
+        "nombre": "Teclado mecanico",
+        "categoria": "Accesorios",
+        "precio": 25000,
+        "disponible": true,
+        "descripcion": "Teclado ideal para trabajar y estudiar"
+    },
+    {
+        "id": 2,
+        "nombre": "Mouse inalambrico",
+        "categoria": "Accesorios",
+        "precio": 12000,
+        "disponible": true,
+        "descripcion": "Mouse practico para el uso diario"
+    },
+    {
+        "id": 3,
+        "nombre": "Monitor de 24 pulgadas",
+        "categoria": "Pantallas",
+        "precio": 85000,
+        "disponible": true,
+        "descripcion": "Monitor para estudiar y trabajar"
+    },
+    {
+        "id": 4,
+        "nombre": "Audifonos",
+        "categoria": "Audio",
+        "precio": 18000,
+        "disponible": false,
+        "descripcion": "Audifonos para escuchar musica"
+    },
+    {
+        "id": 5,
+        "nombre": "Camara web",
+        "categoria": "Accesorios",
+        "precio": 22000,
+        "disponible": true,
+        "descripcion": "Camara para reuniones virtuales"
+    },
+    {
+        "id": 6,
+        "nombre": "Memoria USB",
+        "categoria": "Almacenamiento",
+        "precio": 5000,
+        "disponible": false,
+        "descripcion": "Memoria para almacenar documentos"
+    }
+]

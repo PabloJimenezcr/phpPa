@@ -1,0 +1,95 @@
+
+/* se configuran los colores principales de la pagina */
+:root {
+    --color-principal: #17324d;
+    --color-secundario: #39807c;
+    --color-fondo: #f2f5f8;
+    --color-texto: #263442;
+    --color-blanco: #ffffff;
+}
+
+/* se controla el espacio y el tamano de los elementos */
+* {
+    box-sizing: border-box;
+}
+
+/* se define el estilo general de la pagina */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+/* se disena el encabezado principal */
+.encabezado {
+    padding: 50px 20px;
+    text-align: center;
+    color: var(--color-blanco);
+    background-color: var(--color-principal);
+}
+
+/* se destaca el texto introductorio */
+.etiqueta {
+    color: #9edbd5;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+/* se ajusta el titulo principal */
+.encabezado h1 {
+    margin: 10px 0;
+    font-size: 38px;
+}
+
+/* se limita el ancho del contenido */
+.contenedor {
+    width: min(90%, 900px);
+    margin: 30px auto;
+}
+
+/* se crean las tarjetas de contenido */
+.tarjeta {
+    padding: 25px;
+    margin-bottom: 20px;
+    background-color: var(--color-blanco);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+/* se aplica un color a los titulos */
+.tarjeta h2 {
+    color: var(--color-principal);
+    margin-top: 0;
+}
+
+/* se destaca la tarjeta de bienvenida */
+.bienvenida {
+    border-left: 5px solid var(--color-secundario);
+}
+
+/* se separan los elementos de la lista */
+.tarjeta li {
+    padding: 8px 0;
+}
+
+/* se disena el pie de pagina */
+.pie {
+    padding: 20px;
+    text-align: center;
+    color: var(--color-blanco);
+    background-color: var(--color-principal);
+}
+
+/* se adapta el titulo a pantallas pequenas */
+@media (max-width: 600px) {
+    .encabezado h1 {
+        font-size: 28px;
+    }
+
+    .tarjeta {
+        padding: 18px;
+    }
+}

@@ -1,0 +1,172 @@
+/* se definen los colores principales del sistema */
+:root {
+    --color-principal: #17324d;
+    --color-secundario: #39807c;
+    --color-fondo: #f2f5f8;
+    --color-texto: #263442;
+    --color-blanco: #ffffff;
+    --color-activo: #d8f3e3;
+    --color-texto-activo: #17633c;
+}
+
+/* se facilita el control de las dimensiones */
+* {
+    box-sizing: border-box;
+}
+
+/* se configuran los estilos generales de la pagina */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+/* se disena el encabezado principal */
+.encabezado {
+    padding: 35px 20px;
+    text-align: center;
+    color: var(--color-blanco);
+    background-color: var(--color-principal);
+}
+
+/* se ajusta el titulo del encabezado */
+.encabezado h1 {
+    margin: 5px 0;
+    font-size: 34px;
+}
+
+/* se limita el ancho del contenido principal */
+.contenedor {
+    width: min(90%, 760px);
+    margin: 35px auto;
+}
+
+/* se destaca el bloque principal del perfil */
+.perfil {
+    padding: 35px 25px;
+    margin-bottom: 22px;
+    text-align: center;
+    background-color: var(--color-blanco);
+    border-radius: 16px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* se configura el nombre de la persona */
+.perfil h2 {
+    margin: 0;
+    color: var(--color-principal);
+    font-size: 30px;
+}
+
+/* se destaca la profesion */
+.profesion {
+    color: var(--color-secundario);
+    font-weight: bold;
+}
+
+/* se presenta el estado de actividad */
+.estado {
+    display: inline-block;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* se identifican las personas activas */
+.activo {
+    color: var(--color-texto-activo);
+    background-color: var(--color-activo);
+}
+
+/* se identifican las personas inactivas */
+.inactivo {
+    color: #842029;
+    background-color: #f8d7da;
+}
+
+/* se disenan los bloques de informacion */
+.tarjeta {
+    padding: 25px;
+    margin-bottom: 20px;
+    background-color: var(--color-blanco);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+/* se destacan los titulos de cada bloque */
+.tarjeta h2 {
+    margin-top: 0;
+    color: var(--color-principal);
+    border-bottom: 2px solid #e5ebef;
+    padding-bottom: 10px;
+}
+
+/* se organizan los datos personales */
+.tarjeta p {
+    margin: 12px 0;
+}
+
+/* se separan las etiquetas de los valores */
+.tarjeta strong {
+    display: inline-block;
+    min-width: 190px;
+}
+
+/* se destaca el salario */
+.salario {
+    color: var(--color-secundario);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* se organiza la lista de habilidades */
+.lista-habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+    list-style: none;
+}
+
+/* se presenta cada habilidad como una etiqueta */
+.lista-habilidades li {
+    padding: 8px 14px;
+    color: var(--color-principal);
+    background-color: #e6f2f1;
+    border-radius: 20px;
+}
+
+/* se configura el pie de pagina */
+.pie {
+    padding: 20px;
+    text-align: center;
+    color: var(--color-blanco);
+    background-color: var(--color-principal);
+}
+
+/* se adapta el diseno a pantallas pequenas */
+@media (max-width: 600px) {
+    .encabezado h1 {
+        font-size: 27px;
+    }
+
+    .perfil h2 {
+        font-size: 25px;
+    }
+
+    .tarjeta {
+        padding: 18px;
+    }
+
+    .tarjeta strong {
+        display: block;
+        min-width: auto;
+    }
+
+    .lista-habilidades {
+        gap: 8px;
+    }
+}

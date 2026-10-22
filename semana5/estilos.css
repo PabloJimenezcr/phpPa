@@ -1,0 +1,190 @@
+/* se restablecen los estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* se define el estilo general de la pagina */
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f5f8;
+    color: #202938;
+    line-height: 1.6;
+}
+
+/* se estiliza el encabezado */
+.encabezado {
+    padding: 55px 20px;
+    text-align: center;
+    background: #183153;
+    color: #ffffff;
+}
+
+/* se destaca el texto superior */
+.etiqueta {
+    margin-bottom: 10px;
+    color: #8fd3ff;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+/* se define el tamaño del titulo */
+.encabezado h1 {
+    margin-bottom: 10px;
+    font-size: 38px;
+}
+
+/* se limita el ancho del contenido */
+.contenedor {
+    width: min(1150px, 92%);
+    margin: 35px auto;
+}
+
+/* se organizan los indicadores */
+.resumen {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+/* se estilizan las tarjetas de indicadores */
+.indicador {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 22px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px #0000000d;
+}
+
+/* se destacan los valores del resumen */
+.indicador strong {
+    color: #1769aa;
+    font-size: 24px;
+}
+
+/* se separa la introduccion del catalogo */
+.introduccion {
+    margin-bottom: 25px;
+}
+
+/* se estiliza el titulo del catalogo */
+.introduccion h2 {
+    margin-bottom: 5px;
+    font-size: 28px;
+}
+
+/* se organiza la cuadrícula de productos */
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+/* se define el aspecto de cada producto */
+.tarjeta {
+    padding: 25px;
+    background: #ffffff;
+    border: 1px solid #e2e7ee;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px #00000008;
+}
+
+/* se estiliza el icono del producto */
+.icono-producto {
+    display: grid;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 18px;
+    place-items: center;
+    background: #e4f2ff;
+    color: #1769aa;
+    border-radius: 12px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* se destaca la categoria */
+.categoria {
+    color: #1769aa;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* se define el estilo del nombre del producto */
+.tarjeta h3 {
+    margin: 8px 0;
+    font-size: 21px;
+}
+
+/* se define el estilo de la descripcion */
+.descripcion {
+    min-height: 52px;
+    margin-bottom: 18px;
+    color: #657184;
+    font-size: 14px;
+}
+
+/* se destaca el precio */
+.precio {
+    margin-bottom: 15px;
+    color: #183153;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* se define el estilo general del estado */
+.estado {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* se identifica un producto disponible */
+.disponible {
+    background: #e1f6e8;
+    color: #19743a;
+}
+
+/* se identifica un producto no disponible */
+.agotado {
+    background: #ffe8e8;
+    color: #b42318;
+}
+
+/* se estiliza el pie de pagina */
+footer {
+    padding: 35px 0;
+    text-align: center;
+    color: #657184;
+}
+
+/* se adapta el contenido a tabletas */
+@media (max-width: 900px) {
+    .catalogo {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .resumen {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* se adapta el contenido a celulares */
+@media (max-width: 600px) {
+    .catalogo {
+        grid-template-columns: 1fr;
+    }
+
+    .encabezado h1 {
+        font-size: 29px;
+    }
+}

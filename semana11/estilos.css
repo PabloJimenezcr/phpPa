@@ -1,0 +1,255 @@
+/* se configuran los estilos generales */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 32px 16px;
+    background: #f3f5f8;
+    color: #202a36;
+    font-family: Arial, sans-serif;
+}
+
+/* se limita el ancho del contenido */
+.contenedor {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+/* se diseña el encabezado principal */
+.encabezado {
+    margin-bottom: 26px;
+}
+
+.encabezado h1 {
+    margin: 8px 0;
+    font-size: 32px;
+}
+
+.encabezado p {
+    color: #667085;
+}
+
+.etiqueta {
+    color: #245ca6;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* se crean los paneles */
+.panel {
+    margin-bottom: 24px;
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #e0e5eb;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(20, 35, 55, 0.04);
+}
+
+.panel h2 {
+    margin-top: 0;
+}
+
+/* se organizan los campos de los formularios */
+.formulario {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.campo {
+    display: grid;
+    gap: 8px;
+}
+
+.campo label,
+.buscador label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.campo input,
+.buscador input {
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #cbd3dd;
+    border-radius: 8px;
+    background: #ffffff;
+    font-size: 15px;
+}
+
+.campo input:focus,
+.buscador input:focus {
+    outline: 2px solid #8ab4f8;
+    outline-offset: 1px;
+}
+
+/* se estilizan los botones y enlaces */
+button,
+.boton-editar,
+.boton-secundario {
+    display: inline-block;
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 7px;
+    background: #245ca6;
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+button:hover,
+.boton-editar:hover {
+    background: #19467f;
+}
+
+.boton-eliminar {
+    background: #b42318;
+}
+
+.boton-eliminar:hover {
+    background: #8f1d14;
+}
+
+.boton-secundario {
+    background: #e9edf3;
+    color: #344054;
+}
+
+.boton-secundario:hover {
+    background: #d9e0e9;
+}
+
+/* se muestra el boton principal en todo el ancho */
+.formulario>button {
+    width: fit-content;
+}
+
+/* se organizan los mensajes */
+.mensaje {
+    margin-bottom: 20px;
+    padding: 14px 16px;
+    border-radius: 8px;
+}
+
+.exito {
+    background: #e5f7ec;
+    color: #17663a;
+}
+
+.error {
+    background: #fef3f2;
+    color: #b42318;
+}
+
+/* se organiza el encabezado del listado */
+.encabezado-listado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.encabezado-listado p {
+    color: #667085;
+}
+
+/* se organiza el buscador */
+.buscador {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.buscador-fila {
+    display: flex;
+    gap: 10px;
+}
+
+.buscador-fila input {
+    flex: 1;
+}
+
+/* se permite el desplazamiento horizontal de la tabla */
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #e6e9ee;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+th {
+    background: #f8fafc;
+    color: #475467;
+}
+
+tbody tr:hover {
+    background: #f8fafc;
+}
+
+/* se organizan las acciones de cada producto */
+.acciones {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.acciones form {
+    margin: 0;
+}
+
+/* se configura el enlace para regresar */
+.enlace-volver {
+    color: #245ca6;
+    text-decoration: none;
+}
+
+/* se adapta la interfaz a pantallas pequenas */
+@media (max-width: 650px) {
+    body {
+        padding: 18px 10px;
+    }
+
+    .panel {
+        padding: 16px;
+    }
+
+    .encabezado h1 {
+        font-size: 26px;
+    }
+
+    .formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .buscador-fila {
+        flex-wrap: wrap;
+    }
+
+    .buscador-fila input {
+        flex-basis: 100%;
+    }
+
+    .acciones {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

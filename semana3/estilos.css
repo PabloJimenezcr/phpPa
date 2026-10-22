@@ -1,0 +1,247 @@
+/* se definen los colores principales del sistema */
+:root {
+    --color-principal: #17324d;
+    --color-secundario: #39807c;
+    --color-fondo: #f2f5f8;
+    --color-texto: #263442;
+    --color-blanco: #ffffff;
+    --color-error: #b42318;
+    --color-error-fondo: #fee4e2;
+    --color-aprobado: #17633c;
+    --color-aprobado-fondo: #d8f3e3;
+    --color-reprobado: #842029;
+    --color-reprobado-fondo: #f8d7da;
+}
+
+/* se controla el tamano de los elementos */
+* {
+    box-sizing: border-box;
+}
+
+/* se configuran los estilos generales de la pagina */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+/* se disena el encabezado principal */
+.encabezado {
+    padding: 45px 20px;
+    text-align: center;
+    color: var(--color-blanco);
+    background-color: var(--color-principal);
+}
+
+/* se destaca el texto introductorio */
+.etiqueta {
+    color: var(--color-secundario);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* se adapta el color de la etiqueta del encabezado */
+.encabezado .etiqueta {
+    color: #9edbd5;
+}
+
+/* se ajusta el titulo principal */
+.encabezado h1 {
+    margin: 10px 0;
+    font-size: 36px;
+}
+
+/* se limita el ancho del contenido */
+.contenedor {
+    width: min(90%, 760px);
+    margin: 35px auto;
+}
+
+/* se crean los bloques de contenido */
+.tarjeta {
+    padding: 28px;
+    margin-bottom: 22px;
+    background-color: var(--color-blanco);
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+}
+
+/* se destacan los titulos */
+.tarjeta h2 {
+    margin-top: 0;
+    color: var(--color-principal);
+}
+
+/* se separan los campos del formulario */
+.campo {
+    margin-bottom: 22px;
+}
+
+/* se muestran las etiquetas encima de los campos */
+.campo label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* se configuran los campos de entrada */
+.campo input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccd5dd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* se destaca el campo cuando recibe el foco */
+.campo input:focus {
+    outline: 2px solid var(--color-secundario);
+    outline-offset: 2px;
+}
+
+/* se presenta una indicacion debajo del campo */
+.campo small {
+    display: block;
+    margin-top: 6px;
+    color: #64748b;
+}
+
+/* se disena el boton de envio */
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* se modifica el boton al pasar el cursor */
+button:hover {
+    background-color: var(--color-principal);
+}
+
+/* se disena el bloque de resultado */
+.resultado {
+    border-top: 5px solid var(--color-secundario);
+}
+
+/* se destaca la nota obtenida */
+.nota {
+    margin: 20px 0;
+    color: var(--color-secundario);
+    font-size: 48px;
+    font-weight: bold;
+}
+
+/* se reduce el tamano del valor maximo */
+.nota span {
+    color: #64748b;
+    font-size: 20px;
+}
+
+/* se separan los datos del resultado */
+.detalle {
+    padding: 12px 0;
+    border-bottom: 1px solid #e5ebef;
+}
+
+/* se organizan las etiquetas y los valores */
+.detalle strong {
+    display: inline-block;
+    min-width: 170px;
+}
+
+/* se destaca el estado de aprobacion */
+.estado {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* se identifican los resultados aprobados */
+.aprobado {
+    color: var(--color-aprobado);
+    background-color: var(--color-aprobado-fondo);
+}
+
+/* se identifican los resultados reprobados */
+.reprobado {
+    color: var(--color-reprobado);
+    background-color: var(--color-reprobado-fondo);
+}
+
+/* se presenta el mensaje de confirmacion */
+.mensaje {
+    margin-bottom: 0;
+    color: #64748b;
+}
+
+/* se presentan los mensajes de error */
+.alerta {
+    padding: 20px;
+    margin-bottom: 22px;
+    border-radius: 10px;
+}
+
+/* se identifica visualmente el error */
+.error {
+    color: var(--color-error);
+    background-color: var(--color-error-fondo);
+}
+
+/* se elimina el margen superior del titulo de error */
+.error h2 {
+    margin-top: 0;
+}
+
+/* se organizan las filas de la escala */
+.fila-escala {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 12px 0;
+    border-bottom: 1px solid #e5ebef;
+}
+
+/* se elimina el borde de la ultima fila */
+.fila-escala:last-child {
+    border-bottom: none;
+}
+
+/* se configura el pie de pagina */
+.pie {
+    padding: 22px;
+    text-align: center;
+    color: var(--color-blanco);
+    background-color: var(--color-principal);
+}
+
+/* se adapta el diseno a pantallas pequenas */
+@media (max-width: 600px) {
+    .encabezado h1 {
+        font-size: 27px;
+    }
+
+    .tarjeta {
+        padding: 20px;
+    }
+
+    .nota {
+        font-size: 38px;
+    }
+
+    .detalle strong {
+        display: block;
+        min-width: auto;
+        margin-bottom: 5px;
+    }
+}

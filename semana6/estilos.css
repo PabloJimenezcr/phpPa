@@ -1,0 +1,192 @@
+/* se restablecen los estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* se define la apariencia de la pagina */
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f4f8;
+    color: #202938;
+    line-height: 1.6;
+}
+
+/* se centra el contenido principal */
+.contenedor {
+    width: min(760px, 92%);
+    margin: 40px auto;
+}
+
+/* se estiliza el encabezado */
+.encabezado {
+    padding: 35px 20px;
+    text-align: center;
+    background: #183153;
+    color: #ffffff;
+    border-radius: 14px 14px 0 0;
+}
+
+/* se destaca la etiqueta superior */
+.etiqueta {
+    margin-bottom: 8px;
+    color: #8fd3ff;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* se define el tamano del titulo */
+.encabezado h1 {
+    margin-bottom: 8px;
+    font-size: 30px;
+}
+
+/* se define el area del formulario */
+.formulario-contenedor {
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 0 0 14px 14px;
+    box-shadow: 0 8px 30px #0000000d;
+}
+
+/* se organizan los campos del formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* se organizan las etiquetas y los campos */
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+/* se estilizan las etiquetas */
+label,
+legend {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* se estilizan los campos de entrada */
+input:not([type="checkbox"]):not([type="radio"]),
+select {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    background: #ffffff;
+    font: inherit;
+}
+
+/* se destaca el campo activo */
+input:focus,
+select:focus {
+    outline: 2px solid #8fd3ff;
+    border-color: #1769aa;
+}
+
+/* se organizan los grupos de opciones */
+.grupo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 15px;
+    border: 1px solid #dce3ec;
+    border-radius: 8px;
+}
+
+/* se define el ancho del titulo del grupo */
+.grupo legend {
+    padding: 0 6px;
+}
+
+/* se organizan las opciones */
+.opcion {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: normal;
+}
+
+/* se define el tamano de los controles */
+.opcion input {
+    width: 17px;
+    height: 17px;
+}
+
+/* se estiliza la informacion complementaria */
+small,
+.nota {
+    color: #64748b;
+    font-size: 12px;
+}
+
+/* se estiliza el boton de envio */
+button {
+    min-height: 48px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #1769aa;
+    color: #ffffff;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* se define el estado visual del boton */
+button:hover {
+    background: #124e80;
+}
+
+/* se define el estilo general de los mensajes */
+.mensaje {
+    margin-bottom: 22px;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* se estiliza el mensaje de exito */
+.exito {
+    background: #e1f6e8;
+    color: #176534;
+}
+
+/* se estiliza el mensaje de error */
+.error {
+    background: #fff0f0;
+    color: #a32121;
+}
+
+/* se organiza la lista de errores */
+.error ul {
+    margin: 8px 0 0 20px;
+}
+
+/* se adapta el formulario a celulares */
+@media (max-width: 520px) {
+    .contenedor {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .encabezado,
+    .formulario-contenedor {
+        padding: 24px 18px;
+        border-radius: 0;
+    }
+
+    .encabezado h1 {
+        font-size: 25px;
+    }
+
+    .grupo {
+        flex-direction: column;
+    }
+}
