@@ -1,0 +1,144 @@
+/* se configura el modelo de caja */
+* {
+    box-sizing: border-box;
+}
+
+/* se define la apariencia general */
+body {
+    margin: 0;
+    padding: 30px 16px;
+    font-family: Arial, sans-serif;
+    color: #253247;
+    background: #eef2f6;
+}
+
+/* se centra el catalogo */
+.contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* se organiza el encabezado */
+.encabezado {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.encabezado h1 {
+    margin: 8px 0;
+    color: #174a75;
+}
+
+.encabezado p {
+    color: #64748b;
+}
+
+/* se organiza el buscador */
+.buscador {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+}
+
+.buscador label {
+    width: 100%;
+    font-weight: bold;
+}
+
+.buscador input {
+    flex: 1;
+    min-width: 180px;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+}
+
+.buscador button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    background: #174a75;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* se muestra el contador de resultados */
+.contador {
+    margin-bottom: 20px;
+    color: #475569;
+}
+
+/* se distribuyen las tarjetas */
+.productos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* se define el estilo de cada tarjeta */
+.tarjeta {
+    padding: 22px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.tarjeta h2 {
+    font-size: 19px;
+}
+
+.categoria {
+    color: #64748b;
+    font-size: 13px;
+}
+
+.precio {
+    color: #174a75;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.disponible {
+    color: #167044;
+}
+
+.agotado {
+    color: #b42318;
+}
+
+/* se presenta el mensaje sin resultados */
+.sin-resultados {
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* se adapta el catalogo a tabletas */
+@media (max-width: 800px) {
+    .productos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* se adapta el catalogo a telefonos */
+@media (max-width: 520px) {
+    .productos {
+        grid-template-columns: 1fr;
+    }
+
+    .buscador {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .buscador input,
+    .buscador button {
+        width: 100%;
+    }
+}

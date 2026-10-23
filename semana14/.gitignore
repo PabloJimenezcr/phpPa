@@ -1,0 +1,17 @@
+# se excluyen los secretos locales
+.env
+.env.*
+
+# se conserva un ejemplo de configuracion sin secretos
+!.env.example
+
+# se excluyen archivos temporales
+*.log
+*.tmp
+
+# se excluyen dependencias instaladas
+/vendor/
+
+# se excluyen archivos del sistema operativo
+.DS_Store
+Thumbs.db

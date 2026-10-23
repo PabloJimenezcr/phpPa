@@ -1,0 +1,146 @@
+/* se configura el modelo de caja */
+* {
+    box-sizing: border-box;
+}
+
+/* se define el estilo general */
+body {
+    margin: 0;
+    padding: 30px 16px;
+    font-family: Arial, sans-serif;
+    color: #263445;
+    background: #edf2f7;
+}
+
+/* se centra el formulario */
+.contenedor {
+    width: 100%;
+    max-width: 620px;
+    margin: 25px auto;
+    padding: 32px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+}
+
+/* se organiza el encabezado */
+.encabezado {
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.encabezado h1 {
+    margin: 10px 0;
+    color: #174a75;
+}
+
+.etiqueta {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #467ca3;
+}
+
+/* se organizan los campos */
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+/* se destacan las etiquetas */
+label {
+    font-weight: bold;
+}
+
+/* se unifica el estilo de los controles */
+input,
+select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    background: #ffffff;
+    font-size: 16px;
+}
+
+/* se destaca el campo seleccionado */
+input:focus,
+select:focus {
+    outline: 2px solid #8bbce0;
+    border-color: #174a75;
+}
+
+/* se destaca la accion principal */
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 7px;
+    background: #174a75;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* se cambia el color al pasar el cursor */
+button:hover {
+    background: #103858;
+}
+
+/* se presenta el estado del procesamiento */
+.mensaje {
+    margin-bottom: 22px;
+    padding: 14px;
+    border-radius: 7px;
+}
+
+/* se presenta el mensaje correcto */
+.exito {
+    background: #e1f6e9;
+    color: #17653a;
+}
+
+/* se presenta el mensaje de error */
+.error {
+    background: #fde8e8;
+    color: #9b1c1c;
+}
+
+/* se destacan los errores de los campos */
+.error-campo {
+    color: #b42318;
+}
+
+/* se organiza el resumen */
+.resultado {
+    margin-top: 28px;
+    padding: 20px;
+    background: #f0f6fb;
+    border-left: 4px solid #174a75;
+    border-radius: 7px;
+    overflow-wrap: anywhere;
+}
+
+.resultado h2 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+/* se presenta el pie de pagina */
+footer {
+    margin-top: 30px;
+    color: #64748b;
+    font-size: 13px;
+    text-align: center;
+}
+
+/* se adapta el contenido a pantallas pequeñas */
+@media (max-width: 480px) {
+    .contenedor {
+        margin: 0 auto;
+        padding: 22px 18px;
+    }
+}
